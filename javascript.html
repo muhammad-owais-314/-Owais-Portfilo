@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0/css/mdb.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .js-empty-section{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(135deg, #050505, #0f0f12, #1a0d0d);
+}
+
+/* Card */
+.js-empty-card{
+  padding: 50px 30px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  backdrop-filter: blur(18px);
+  box-shadow: 0px 15px 45px rgba(0,0,0,0.75);
+  transition: 0.4s;
+}
+
+.js-empty-card:hover{
+  transform: translateY(-10px);
+  border: 1px solid rgba(255, 215, 0, 0.45);
+  box-shadow: 0px 20px 55px rgba(255, 215, 0, 0.15);
+}
+
+/* Icon */
+.js-icon{
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.25);
+  margin-bottom: 20px;
+  animation: glow 2s infinite;
+}
+
+.js-icon i{
+  font-size: 40px;
+  color: #ffd700;
+}
+
+/* Glow animation */
+@keyframes glow{
+  0%{ transform: scale(1); }
+  50%{ transform: scale(1.12); }
+  100%{ transform: scale(1); }
+}
+
+/* Title */
+.js-title{
+  font-size: 42px;
+  font-weight: 900;
+  color: #ffd700;
+  text-shadow: 0px 0px 18px rgba(255, 215, 0, 0.35);
+  margin-bottom: 15px;
+}
+
+/* Text */
+.js-text{
+  font-size: 16px;
+  color: #d1d5db;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.js-btn{
+  padding: 12px 28px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff4d4d, #ffd700);
+  color: black;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.js-btn:hover{
+  transform: scale(1.08);
+  box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.25);
+  cursor: pointer;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .js-title{
+    font-size: 32px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    
+
+<section class="js-empty-section">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-8 text-center">
+
+        <div class="js-empty-card">
+
+          <div class="js-icon">
+            <i class="fa-brands fa-js"></i>
+          </div>
+
+          <h1 class="js-title">
+            JavaScript Section 🚧
+          </h1>
+
+          <p class="js-text">
+            This section is currently empty 😅  
+            I will upload JavaScript projects here very soon 🚀✨
+          </p>
+
+          <button class="js-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i> Back to Assignments
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.umd.min.js"></script>
+</body>
+</html>
