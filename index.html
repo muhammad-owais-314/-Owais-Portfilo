@@ -1,274 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Owais Portfoli</title>
+  <title>AI Developer Portfolio</title>
   <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0/css/mdb.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <style>
+    /* === Body Reset === */
+    *{margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif;}
+
+    /* === Full Screen Hero Section === */
+    .view-section{
+      position: relative;
+      width:100%;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      overflow:hidden;
+    }
+
+    /* === Video Background === */
+    #bg-video{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:1;
+      filter: brightness(0.45); /* dark overlay */
+    }
+
+    /* === Overlay for better text visibility === */
+    .overlay{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background: rgba(0,0,0,0.45);
+      z-index:2;
+    }
+
+    /* === Content === */
+    .view-content{
+      position:relative;
+      z-index:3;
+      max-width:800px;
+      padding: 0 20px;
+    }
+
+    /* === Title === */
+    .view-title{
+      font-size: 48px;
+      font-weight: 900;
+      color: #ff4d4d; /* Red/Gold vibe */
+      text-shadow: 0 0 20px rgba(255,77,77,0.7), 0 0 35px rgba(255,215,0,0.5);
+      margin-bottom: 20px;
+    }
+
+    .view-title i{
+      margin-right: 12px;
+      color:#ffd700; /* Gold icon */
+      animation: pulse 2s infinite;
+    }
+
+    /* Pulse animation for icon */
+    @keyframes pulse{
+      0%{ transform: scale(1); }
+      50%{ transform: scale(1.12); }
+      100%{ transform: scale(1); }
+    }
+
+    /* === Text === */
+    .view-text{
+      font-size:18px;
+      color: #e2e8f0;
+      margin-bottom:35px;
+      line-height:1.8;
+    }
+
+    /* === Button === */
+    .view-btn{
+      display:inline-block;
+      padding:14px 30px;
+      border-radius:50px;
+      font-weight:700;
+      font-size:16px;
+      background: linear-gradient(135deg, #ff4d4d, #ffd700);
+      color:black;
+      text-decoration:none;
+      box-shadow: 0 0 25px rgba(255,215,0,0.4);
+      transition:0.4s;
+    }
+
+    .view-btn:hover{
+      transform: scale(1.05);
+      box-shadow:0 0 40px rgba(255,215,0,0.5);
+      cursor:pointer;
+    }
+
+    /* === Responsive === */
+    @media(max-width:768px){
+      .view-title{ font-size:32px; }
+      .view-text{ font-size:16px; }
+    }
+
+  </style>
+</head>
 <body>
 
+  <section class="view-section">
 
-  <div id="navbar"></div>
+    <!-- Video Background -->
+    <video autoplay muted loop id="bg-video">
+      <source src="8084499-uhd_3840_2160_25fps.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
 
+    <!-- Overlay -->
+    <div class="overlay"></div>
 
-  <section>
-    <div class="container my-5">
-      <div class="row d-flex align-items-center justify-content-center text-center text-md-start">
+    <!-- Center Content -->
+    <div data-aos="fade-up-left" class="view-content text-center">
+      <h1 data-aos="zoom-in" class="view-title">
+        <i class="fa-solid fa-robot"></i> Muhammad Owais <br>AI Developer Student 🤖✨
+      </h1>
+      <p class="view-text">
+        Welcome to my portfolio 🚀💻<br>
+        Showcasing AI projects, modern websites, and creative ideas 💡
+      </p>
 
-        <div data-aos="fade-up-right"  class="col-12 col-md-6" id="hero">
-          <h1 class="hero-title fw-bold display-2 m-3">Owais Hear.</h1>
-
-          <p class="hero-subtitle">
-            I’m Owais, on a journey to become a skilled web developer.
-          </p>
-
-          <p class="hero-line">
-            Small steps today. Big achievements tomorrow.
-          </p>
-        </div>
-
-       <div class="col-12 col-md-6 d-flex justify-content-center">
-  
-  <div data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
-    <span class="circle-left"></span>
-    <span class="circle-right"></span>
-
-    <span class="border-rotate border-1"></span>
-    <span class="border-rotate border-2"></span>
-
-    <img id="img1" src="img1.jpeg" class="img-fluid rounded-circle w-75" alt="image">
-  </div>
-
-</div>
-
-
-      </div>
+      <a data-aos="flip-left" href="index.html" class="view-btn">
+        <i class="fa-solid fa-eye"></i> View Portfolio
+      </a>
     </div>
+
   </section>
-  
-                         <!-- About Me -->
-
-  <section id="about me" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <h1 class="about-heading">
-  <i class="fa-solid fa-user-astronaut"></i> About Me
-</h1>
-
-
-      <!-- 1st Column -->
-      <div class="col-12 col-md-6 about-left my-4">
-
-        <h1 class="name-title">
-         <i class="fa-solid fa-crown"></i> Its Me Owais Ansari 🚀✨
-        </h1>
-
-        <p class="about-para">
-         <i class="fa-solid fa-code"></i>
-  A passionate developer who builds modern websites with clean UI ✨, smooth animations 🎬,
-  and a powerful user experience 🚀.
-        </p>
-
-         <i class="fa-solid fa-bolt"></i>
-  I love turning creative ideas 💡 into responsive websites 📱💻 that look professional on every device 🌍🔥.
-
-      </div>
-
-      <!-- 2nd Column -->
-      <div class="col-12 col-md-6 about-right">
-
-        <div class="info-box">
-          <h3><i class="fa-solid fa-laptop-code"></i> Skills</h3>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> HTML / CSS</li>
-            <li><i class="fa-solid fa-check"></i> Bootstrap</li>
-            <li><i class="fa-solid fa-check"></i> JavaScript</li>
-            <li><i class="fa-solid fa-check"></i> jQuery</li>
-          </ul>
-        </div>
-
-        <div class="info-box">
-          <h3><i class="fa-solid fa-fire"></i> Strength</h3>
-          <ul>
-            <li><i class="fa-solid fa-star"></i> Fast Learner</li>
-            <li><i class="fa-solid fa-star"></i> Creative Thinking</li>
-            <li><i class="fa-solid fa-star"></i> Hard Working</li>
-            <li><i class="fa-solid fa-star"></i> Problem Solver</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-              <!-- assigment page -->
-<section id="assigment"  class="assignment-section">
-
-  <div class="container">
-
-    <!-- ROW 1 (Heading + Line) -->
-    <div data-aos="fade-down-right" class="row">
-      <div class="col-12 text-center">
-        
-        <h1 class="assignment-title">
-          <i class="fa-solid fa-book-open-reader"></i> My Assignments
-        </h1>
-
-        <p class="assignment-text">
-          Here you will find my latest assignments and practice projects 📚✨  
-          I always focus on clean code, modern design, and creative ideas 🚀💻
-        </p>
-
-      </div>
-    </div>
-
-
-    <!-- ROW 2 (Cards) -->
-    <div data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-      <div class="col-12">
-
-       <div class="assignment-cards">
-
-  <!-- CARD 1 -->
-  <div class="a-card">
-    <h3><i class="fa-solid fa-code"></i> HTML & CSS Practice</h3>
-    <p>Simple layouts, responsive design, and creative UI practice 💡</p>
-
-    <a href="html gallery/gallery.html" class="a-btn">View Work</a>
-  </div>
-
-  <!-- CARD 2 -->
-  <div class="a-card">
-    <h3><i class="fa-brands fa-bootstrap"></i> Bootstrap Projects</h3>
-    <p>Modern responsive websites using Bootstrap grid and components ⚡</p>
-
-    <a href="Bootstrap practice/index.html" class="a-btn">View Work</a>
-  </div>
-
-  <!-- CARD 3 -->
-  <div class="a-card">
-    <h3><i class="fa-solid fa-laptop-code"></i> JavaScript Practice</h3>
-    <p>Interactive features, animations, and mini web apps 🎯</p>
-
-    <a href="javascript.html" class="a-btn">View Work</a>
-  </div>
-
-</div>
-
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-                      <!-- contant page -->
-
-
-
-<section id="contact" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
-  <div class="container">
-    <div class="row justify-content-center">
-      
-      <div class="col-12 col-md-8 col-lg-6">
-
-        <div class="contact-card text-center">
-
-          <div class="contact-logo">
-            <i class="fa-solid fa-id-card-clip"></i>
-          </div>
-
-          <h1 class="contact-title">
-            <i class="fa-solid fa-handshake"></i> Contact Me
-          </h1>
-
-          <p class="contact-text">
-            Feel free to contact me anytime 💬.  
-            I’m always open to new opportunities 🚀 and creative projects ✨.
-          </p>
-
-          <div class="contact-details">
-
-            <p><i class="fa-solid fa-user"></i> <span>Muhammad Owais Ansari</span></p>
-
-            <p><i class="fa-solid fa-phone"></i> <span>0311-2795023</span></p>
-
-            <p><i class="fa-solid fa-envelope"></i> <span>its.owaisansari314@gmail.com</span></p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <div id="footer"></div>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+<script src="MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.umd.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
   AOS.init();
 </script>
 
-  <script src="MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
 
-  <script>
-    $(document).ready(() => {
+      // Button click animation
+      $('.view-btn').on('mousedown', function(){
+        $(this).addClass('btn-clicked');
+      });
 
-      $.get('navbar.html', (data) => {
-        $('#navbar').html(data)
-      })
+      $('.view-btn').on('mouseup mouseleave', function(){
+        $(this).removeClass('btn-clicked');
+      });
 
+      // Title hover glow effect
+      $('.view-title').hover(
+        function(){ $(this).addClass('title-hover'); },
+        function(){ $(this).removeClass('title-hover'); }
+      );
 
-      $.get('footer.html', (data) => {
-        $('#footer').html(data)
-      })
+      // Text click effect
+      $('.view-text').on('click', function(){
+        $(this).css({
+          'color':'#22d3ee',
+          'text-shadow':'0 0 25px #22d3ee, 0 0 40px #ffd700'
+        });
+      });
 
-    })
+    });
   </script>
-
 </body>
-
 </html>
